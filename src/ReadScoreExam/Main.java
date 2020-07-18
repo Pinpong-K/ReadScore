@@ -34,11 +34,14 @@ public class Main {
         System.out.println("print text : "+message);
         Readability readability = new Readability(message);
         readability.printResult();
-        System.out.print("Enter the score you want to calculate: ");
-        String socreSelect = scan.next();
-        if(socreSelect.equals("all"))
-        {
-            readability.printReadabilityScore();
+
+        while (true) {
+            System.out.print("Enter the score you want to calculate: ");
+            String socreSelect = scan.next();
+            if (socreSelect.equals("all")) {
+                readability.printReadabilityScore();
+                break;
+            }
         }
 
 
